@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Counter</title>
+    <!-- Aggiungi il link a Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .chart-container {
+            width: 80%;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Car Counter - Via Italo Bonino Bonini, 96</h1>
+    <div id="currentDayCount"></div>
+    <div class="chart-container">
+        <label for="datePicker">Seleziona una data: </label>
+        <input type="date" id="datePicker">
+        <button onclick="updateHourlyChart()">Aggiorna Grafico</button>
+        <canvas id="myChart2"></canvas>
+    </div>
+    <h2>Macchine degli ultimi 14 giorni</h2>
+    <div class="chart-container">
+        <canvas id="myChart"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
