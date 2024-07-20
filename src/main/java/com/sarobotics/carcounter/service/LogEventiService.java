@@ -65,7 +65,7 @@ public class LogEventiService {
 	}
 
 	public List<EventiPerGiornoDTO> countTotaleEventiDegliUltimi14Giorni() {
-		List<Object[]> results = ler.eventiPerGiorno();
+		List<Object[]> results = ler.eventiPer14Giorni();
         List<EventiPerGiornoDTO> epgList = new ArrayList<>();
         
         // converter
