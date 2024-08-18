@@ -29,3 +29,18 @@ jobs:
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+
+    - name: Find JAR file
+      id: find_jar
+      run: |
+        JAR_FILE=$(find target -name "*.jar" | head -n 1)
+        echo "JAR_FILE=$JAR_FILE" >> $GITHUB_ENV
+
+    - name: Stop CarCounter Service
+      run: sudo systemctl stop carcounter.service
+
+    - name: Copy JAR to deployment directory
+      run: sudo cp ${{ env.JAR_FILE }} /home/alessia/carcounter.jar
+
+    - name: Start CarCounter Service
+      run: sudo systemctl start carcounter.service
