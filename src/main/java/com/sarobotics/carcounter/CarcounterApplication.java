@@ -22,7 +22,7 @@ public class CarcounterApplication {
 //            // Puoi aggiungere ulteriori azioni qui se necessario
 //        });
 //        detector.startListening();
-				 //Aggiungiamo un commento per fare la push
+			
 	}
 	
 	
