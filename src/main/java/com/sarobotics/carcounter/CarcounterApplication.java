@@ -23,6 +23,7 @@ public class CarcounterApplication {
 //        });
 //        detector.startListening();
 			
+			// GOOD
 	}
 	
 	
